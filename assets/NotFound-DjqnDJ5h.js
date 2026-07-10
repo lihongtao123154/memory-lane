@@ -1,6 +1,0 @@
-import{d as s,u as a,j as e}from"./index-CxiIpeIp.js";import{A as n}from"./arrow-left-CHfPxj61.js";/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const r=[["path",{d:"M9 10h.01",key:"qbtxuw"}],["path",{d:"M15 10h.01",key:"1qmjsl"}],["path",{d:"M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z",key:"uwwb07"}]],c=s("ghost",r);function m(){const t=a();return e.jsx("div",{className:"min-h-screen pt-16 flex items-center justify-center",children:e.jsxs("div",{className:"text-center",children:[e.jsx("div",{className:"w-24 h-24 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6",children:e.jsx(c,{className:"text-cream-500",size:48})}),e.jsx("h1",{className:"font-serif text-4xl text-cream-100 mb-4",children:"404"}),e.jsx("h2",{className:"font-serif text-2xl text-cream-200 mb-4",children:"页面不存在"}),e.jsx("p",{className:"text-cream-400 mb-8",children:"你要找的页面似乎迷路了..."}),e.jsxs("button",{onClick:()=>t("/"),className:"inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-night-900 rounded-full font-medium hover:bg-amber-400 transition-colors",children:[e.jsx(n,{size:18}),"返回首页"]})]})})}export{m as default};

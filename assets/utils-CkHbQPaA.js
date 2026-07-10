@@ -1,1 +1,0 @@
-import{E as r}from"./index-BAIap4ZK.js";const f=new Map(r.map(t=>[t.value,t]));function c(t){return f.get(t)||r[0]}function m(t){const n=new Date(t),a=new Date().getTime()-n.getTime(),o=Math.floor(a/(1e3*60*60)),e=Math.floor(o/24);return o<1?"刚刚":o<24?`${o}小时前`:e<7?`${e}天前`:n.toLocaleDateString("zh-CN")}export{m as f,c as g};
