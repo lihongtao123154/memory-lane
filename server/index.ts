@@ -26,7 +26,13 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
 })
 
+const distPath = path.resolve(process.cwd(), 'dist')
+app.use(express.static(distPath))
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'))
+})
+
 app.listen(PORT, () => {
-  console.log(`\n  Memory Lane API running at http://localhost:${PORT}`)
+  console.log(`\n  Memory Lane running at http://localhost:${PORT}`)
   console.log(`  Health check: http://localhost:${PORT}/api/health\n`)
 })
