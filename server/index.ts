@@ -14,8 +14,6 @@ const PORT = process.env.PORT || 3001
 app.use(cors({ origin: true, credentials: true }))
 app.use(express.json())
 
-initDB()
-
 app.use('/api/auth', authRoutes)
 app.use('/api/memories', memoriesRoutes)
 app.use('/api/posts', postsRoutes)
@@ -32,7 +30,11 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(distPath, 'index.html'))
 })
 
-app.listen(PORT, () => {
-  console.log(`\n  Memory Lane running at http://localhost:${PORT}`)
-  console.log(`  Health check: http://localhost:${PORT}/api/health\n`)
-})
+async function start() {
+  await initDB()
+  app.listen(PORT, () => {
+    console.log(`\n  Memory Lane running at http://localhost:${PORT}`)
+    console.log(`  Health check: http://localhost:${PORT}/api/health\n`)
+  })
+}
+start()
